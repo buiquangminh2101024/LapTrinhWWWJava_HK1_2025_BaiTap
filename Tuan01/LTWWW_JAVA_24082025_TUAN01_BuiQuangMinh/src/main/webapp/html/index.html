@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div style="padding-left: 30px">
+        <h1>Register</h1>
+        <form action="/cau5" method="post">
+            <h3>Name<span style="color: red">*</span></h3>
+            <div style="display: flex; gap: 10px">
+                <label>
+                    <input type="text" name="first_name" required>
+                    First
+                </label>
+                <label>
+                    <input type="text" name="last_name" required>
+                    Last
+                </label>
+            </div>
+            <h3>Username<span style="color: red">*</span></h3>
+            <div>
+                <label>
+                    <input type="text" name="username" required>
+                </label>
+            </div>
+            <h3>E-mail<span style="color: red">*</span></h3>
+            <div>
+                <label>
+                    <input type="text" name="email" required>
+                </label>
+            </div>
+            <h3>Password<span style="color: red">*</span></h3>
+            <div>
+                <label>
+                    <input type="text" name="password" required>
+                </label>
+            </div>
+            <h3>Facebook</h3>
+            <div>
+                <label>
+                    <input type="text" name="facebook">
+                    Enter your Facebook profile URL
+                </label>
+            </div>
+            <h3>Short Bio</h3>
+            <div>
+                <label>
+                    <input type="text" name="short_bio">
+                    Share a little information about yourself
+                </label>
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
