@@ -61,9 +61,9 @@ public class UploadFormData extends HttpServlet {
             // Chèn dữ liệu
             int row = pstmt.executeUpdate();
             if(row > 0){
-                message = "Đã thêm thành công";
                 // Lấy hình từ csdl rồi đưa vào thư mục uploads
                 getImageAndSaveInProject(req, fileName);
+                message = "Đã thêm thành công";
             }
         } catch (Exception e) {
             message = "ERROR:" + e.getMessage();
@@ -87,7 +87,7 @@ public class UploadFormData extends HttpServlet {
                     userDir = new File(userDir).getParent();
                     userDir = new File(userDir).getParent();
                 }
-                String filePath = userDir + "/Tuan02/UploadFilesToDatabaseDemo/src/main/webapp/uploads/" + fileName;
+                String filePath = userDir + "/LapTrinhWWWJava_HK1_2025_BaiTap/Tuan02/UploadFilesToDatabaseDemo/src/main/webapp/uploads/" + fileName;
 
                 Files.copy(in, Path.of(filePath), StandardCopyOption.REPLACE_EXISTING);
             }

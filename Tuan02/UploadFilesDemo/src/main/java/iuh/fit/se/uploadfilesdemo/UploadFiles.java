@@ -27,7 +27,7 @@ public class UploadFiles extends HttpServlet {
         Collection<Part> parts = req.getParts();
 
         InputStream input = null;
-        String filePath = "C:\\Users\\QUANG MINH\\Documents\\lap_trinh_IntelliJIDEA_Java\\Servlet1\\Tuan02\\UploadFilesDemo\\src\\main\\webapp\\uploads\\";
+        String filePath = "C:\\Users\\QUANG MINH\\Documents\\lap_trinh_IntelliJIDEA_Java\\Servlet1\\LapTrinhWWWJava_HK1_2025_BaiTap\\Tuan02\\UploadFilesDemo\\src\\main\\webapp\\uploads\\";
         if (parts.size() != 0) {
             for (Part part : parts) {
                 String fileName = part.getSubmittedFileName();
