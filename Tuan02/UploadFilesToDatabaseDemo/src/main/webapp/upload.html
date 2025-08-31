@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input[type="file"],
+        input[type="text"] {
+          grid-column: span 3
+        }
+    </style>
+</head>
+<body>
+  <form action="uploadFormData" method="post" enctype="multipart/form-data">
+    <div style="width: 500px; display: flex; align-items: center; flex-direction: column;">
+      <h1>File Upload to Database<br>(multipart/form-data)</h1>
+      <div style="width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 4px; align-items: center;">
+        <label>First Name:</label>
+        <input type="text" name="firstname" required>
+        <label>Last Name:</label>
+        <input type="text" name="lastname" required>
+        <label>Portrait Photo:</label>
+        <input type="file" name="portraitphoto" required>
+        <input type="submit" value="Save">
+      </div>
+    </div>
+  </form>
+</body>
+</html>
