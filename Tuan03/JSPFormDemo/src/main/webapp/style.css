@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #87CEEB;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #87CEEB;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #4682B4;
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-row label {
+    width: 120px;
+    font-weight: bold;
+    color: white;
+    margin-right: 10px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    margin-right: 5px;
+}
+
+.form-row input[type="text"] {
+    width: 200px;
+}
+
+.form-row input[type="email"] {
+    width: 200px;
+}
+
+.form-row select {
+    width: 80px;
+    padding: 5px;
+}
+
+.date-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+textarea {
+    width: 300px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.qualifications-table {
+    border: 3px solid #4682B4;
+    background-color: #87CEEB;
+    margin: 15px 0;
+    width: 100%;
+    flex: 1;
+}
+
+.qualifications-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.qualifications-table th {
+    background-color: #87CEEB;
+    border: 1px solid #4682B4;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.qualifications-table td {
+    border: 1px solid #4682B4;
+    padding: 8px;
+    text-align: left;
+    background-color: white;
+}
+
+.qualifications-table td:first-child,
+.qualifications-table td:nth-child(2){
+    font-weight: bold;
+    background-color: #87CEEB;
+    color: white;
+}
+
+.qualifications-table input {
+    width: 95%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.table-hints {
+    padding: 5px 8px;
+    font-size: 12px;
+    color: white;
+    background-color: #87CEEB;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 8px 20px;
+    margin: 0 10px;
+    border: 1px solid #666;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+.course-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hint-text {
+    font-size: 12px;
+    color: #666;
+    margin-left: 5px;
+}
+
+.qualification-section {
+    margin: 15px 0;
+}
+
+.qualification-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.qualification-label {
+    font-weight: bold;
+    color: white;
+    width: 120px;
+    margin-top: 10px;
+}
