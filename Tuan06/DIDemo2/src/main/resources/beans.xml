@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- bean definitions here -->
+    <bean id="address1" class="iuh.fit.se.models.Address">
+        <property name="city" value="Hollywood"/>
+        <property name="state" value="Florida"/>
+        <property name="country" value="USA"/>
+    </bean>
+    <bean id="employee1" class="iuh.fit.se.models.Employee">
+        <property name="id" value="1"/>
+        <property name="name" value="Josh Gad(Olaf-Frozen)"/>
+        <property name="address" ref="address1"/>
+    </bean>
+    <bean id="address2" class="iuh.fit.se.models.Address">
+        <property name="city" value="Los Angeles"/>
+        <property name="state" value="California"/>
+        <property name="country" value="USA"/>
+    </bean>
+    <bean id="employee2" class="iuh.fit.se.models.Employee">
+        <property name="id" value="2"/>
+        <property name="name" value="Linda Larkin(Jasmine-Aladdin)"/>
+        <property name="address" ref="address2"/>
+    </bean>
+
+<!--    <bean id="classProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--        <property name="locations">-->
+<!--            <list>-->
+<!--                <value>classpath:class.properties</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <bean id="address" class="iuh.fit.se.models.Address">-->
+<!--        <property name="city" value="${city5}"/>-->
+<!--        <property name="country" value="USA"/>-->
+<!--    </bean>-->
+<!--    <bean id="employee5" class="iuh.fit.se.models.Employee">-->
+<!--        <property name="id" value="5"/>-->
+<!--        <property name="name" value="${name5}"/>-->
+<!--    </bean>-->
+</beans>

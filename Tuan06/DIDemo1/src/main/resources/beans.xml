@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- bean definitions here -->
+    <bean id="student1" class="iuh.fit.se.xmlbased.Student">
+        <property name="id" value="001"/>
+        <property name="name" value="Nguyen Van A"/>
+    </bean>
+
+    <bean id="class1" class="iuh.fit.se.xmlbased.Class_">
+        <property name="classId" value="DHKTPM17C"/>
+        <property name="className" value="Dai Hoc KTMP17C"/>
+    </bean>
+    <bean id="student2" class="iuh.fit.se.xmlbased.Student">
+        <property name="id" value="2"/>
+        <property name="name" value="Nguyen Van B"/>
+        <property name="class_" ref="class1"/>
+    </bean>
+    <bean id="student3" class="iuh.fit.se.xmlbased.Student">
+        <constructor-arg name="id" value="003"/>
+        <constructor-arg name="name" value="Nguyen Van C"/>
+        <constructor-arg name="class_" ref="class1"/>
+    </bean>
+
+    <bean id="address1" class="iuh.fit.se.xmlbased.Address">
+        <property name="city" value="HCM"/>
+        <property name="country" value="Viet Nam"/>
+        <property name="street" value="Nguyen Van Bao"/>
+    </bean>
+    <bean id="address2" class="iuh.fit.se.xmlbased.Address">
+        <property name="city" value="HCM"/>
+        <property name="country" value="Viet Nam"/>
+        <property name="street" value="Nguyen Thai Son"/>
+    </bean>
+    <bean id="person1" class="iuh.fit.se.xmlbased.Person">
+        <property name="age" value="20"/>
+        <property name="name" value="Nguyen Van D"/>
+        <property name="addresses">
+            <list>
+                <ref bean="address1"/>
+                <ref bean="address2"/>
+            </list>
+        </property>
+        <property name="email">
+            <list>
+                <value>D@gmail.com</value>
+                <value>D@yomail.com</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="classProperties" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:class.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="class2" class="iuh.fit.se.xmlbased.Class_">
+        <property name="classId" value="DHKTPM"/>
+        <property name="className" value="${className}"/>
+    </bean>
+
+    <bean id="faculty" class="iuh.fit.se.xmlbased.Faculty">
+        <property name="id" value="FI"/>
+        <property name="name" value="Faculty of Information Technology"/>
+    </bean>
+    <bean id="dept1" class="iuh.fit.se.xmlbased.Department" autowire="no">
+        <property name="id" value="DP1"/>
+        <property name="name" value="Deparment 1"/>
+        <property name="faculty" ref="faculty"/>
+    </bean>
+    <bean id="dept2" class="iuh.fit.se.xmlbased.Department" autowire="byName">
+        <property name="id" value="DP2"/>
+        <property name="name" value="Deparment 2"/>
+    </bean>
+    <bean id="dept3" class="iuh.fit.se.xmlbased.Department" autowire="byType">
+        <property name="id" value="DP3"/>
+        <property name="name" value="Deparment 3"/>
+    </bean>
+    <bean id="dept4" class="iuh.fit.se.xmlbased.Department" autowire="constructor">
+        <property name="id" value="DP4"/>
+        <property name="name" value="Deparment 4"/>
+    </bean>
+
+    <bean id="user" class="iuh.fit.se.annotationbased.User">
+        <property name="username" value="user01"/>
+        <property name="password" value="123456"/>
+    </bean>
+    <bean id="group" class="iuh.fit.se.annotationbased.Group">
+        <property name="groupName" value="Group 1"/>
+    </bean>
+</beans>
