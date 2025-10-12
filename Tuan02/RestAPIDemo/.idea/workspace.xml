@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="888e44e5-4c42-478e-91e1-bad396fea78d" name="Changes" comment="" />
+    <list default="true" id="888e44e5-4c42-478e-91e1-bad396fea78d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MailDemo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MailDemo/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebSocketDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebSocketDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tuan05/Web/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tuan05/Web/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,10 +187,25 @@
       <workItem from="1756900210053" duration="1323000" />
       <workItem from="1756909502459" duration="9725000" />
       <workItem from="1756962417624" duration="5981000" />
+      <workItem from="1756983874497" duration="29000" />
+      <workItem from="1758886455088" duration="2311000" />
+      <workItem from="1758888899917" duration="207000" />
+      <workItem from="1759059313277" duration="243000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

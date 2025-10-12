@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="307cc1c9-2956-444b-8dc0-e46549baea4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../MailDemo/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MailDemo/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RestAPIDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RestAPIDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tuan05/Web/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tuan05/Web/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +50,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.Build WebSocketDemo.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WebSocketDemo [dependencies].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Tomcat Server.Tomcat 11.0.10.executor&quot;: &quot;Run&quot;,
@@ -57,7 +62,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40229884&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -66,7 +74,29 @@
       <recent name="C:\Users\QUANG MINH\Documents\lap_trinh_IntelliJIDEA_Java\Servlet1\LapTrinhWWWJava_HK1_2025_BaiTap\Tuan02\WebSocketDemo\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 11.0.10">
+    <configuration name="WebSocketDemo [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Tomcat 11.0.10" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
@@ -154,6 +184,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.WebSocketDemo [dependencies]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -178,6 +213,11 @@
       <workItem from="1757003510501" duration="3068000" />
       <workItem from="1757038916928" duration="529000" />
       <workItem from="1757062570932" duration="968000" />
+      <workItem from="1757064285068" duration="26000" />
+      <workItem from="1759820903500" duration="2123000" />
+      <workItem from="1759823055955" duration="367000" />
+      <workItem from="1759831833858" duration="360000" />
+      <workItem from="1759856505012" duration="24000" />
     </task>
     <servers />
   </component>
