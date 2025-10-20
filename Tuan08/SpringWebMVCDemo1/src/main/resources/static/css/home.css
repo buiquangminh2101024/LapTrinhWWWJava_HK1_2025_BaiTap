@@ -1,0 +1,42 @@
+body {
+    padding-inline: 20px;
+}
+h1 {
+    text-align: center;
+}
+.option {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+button:hover {
+    cursor: pointer;
+}
+.button-gray {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: gray;
+    border-width: 0;
+    color: white;
+}
+.button-light_blue {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border-width: 0;
+    color: white;
+}
+th {
+    background-color: lightgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+td {
+    padding: 10px 10px;
+    border-width: 1px;
+    border-color: lightgrey;
+}
