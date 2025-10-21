@@ -16,7 +16,10 @@
     <h1>EMPLOYEE LIST</h1>
     <hr>
     <div class="option">
-        <button class="button-gray">Search</button>
+        <form action="${pageContext.request.contextPath}/find" method="post">
+            <input name="email_name" placeholder="Name Or Email" class="input">
+            <button class="button-gray">Search</button>
+        </form>
         <button
             class="button-light_blue"
             onclick="window.location.href='${pageContext.request.contextPath}/register'"
@@ -45,6 +48,13 @@
                     <td>${employee.gender? "male": "female"}</td>
                     <td>
                         <a href="${pageContext.request.contextPath}/update_intermediate?id=${employee.id}">Update</a>
+                        |
+                        <a
+                            href="${pageContext.request.contextPath}/delete_intermediate?id=${employee.id}"
+                            onclick="return confirm('Are you sure?')"
+                        >
+                            Delete
+                        </a>
                     </td>
                 </tr>
             </c:forEach>

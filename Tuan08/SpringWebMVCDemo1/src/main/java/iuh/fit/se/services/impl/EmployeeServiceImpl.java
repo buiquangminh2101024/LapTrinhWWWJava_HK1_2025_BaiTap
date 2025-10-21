@@ -45,4 +45,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
+
+    @Override
+    public List<Employee> findByFirstNameContainingOrLastNameContainingOrEmailContaining(String text) {
+        return employeeRepository.findByFirstNameContainingOrLastNameContainingOrEmailContaining(text, text, text);
+    }
 }

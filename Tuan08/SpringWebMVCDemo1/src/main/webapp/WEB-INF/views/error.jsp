@@ -12,8 +12,7 @@
         setTimeout(()=>{window.location.href="${pageContext.request.contextPath}"}, 2000)
     </script>
 </head>
-<body>
-    <h1>Thành công ${type == "add"? "thêm": "sửa"} một nhân viên</h1>
-    <h2>Đợi một chút trước khi quay về</h2>
+<body style="background-color:rgb(0,0,0); margin:0; display: flex; justify-content: center; align-items: center;">
+        <img src="${pageContext.request.contextPath}/image/error404.jpg" style="height: 100vh;"/>
 </body>
 </html>

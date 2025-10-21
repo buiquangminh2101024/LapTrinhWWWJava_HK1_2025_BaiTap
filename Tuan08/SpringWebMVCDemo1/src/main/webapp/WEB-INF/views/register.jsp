@@ -22,6 +22,8 @@
     <div class="register">
         <%--@elvariable id="employee" type="iuh.fit.se.entities.Employee"--%>
         <form:form action="${pageContext.request.contextPath}/save" method="POST" modelAttribute="employee">
+            <form:input path="id" type="hidden"/>
+
             <form:label path="firstName" cssClass="label">First Name</form:label>
             <form:input path="firstName" cssClass="input" placeHolder="First Name"/>
             <form:errors path="firstName" cssClass="error"/>
@@ -61,7 +63,12 @@
                 >
                     Back
                 </form:button>
-                <form:button class="button-light_blue">Register</form:button>
+                <c:if test="${employee.id != 0}">
+                    <form:button class="button-light_blue">Update</form:button>
+                </c:if>
+                <c:if test="${employee.id == 0}">
+                    <form:button class="button-light_blue">Register</form:button>
+                </c:if>
             </div>
         </form:form>
     </div>

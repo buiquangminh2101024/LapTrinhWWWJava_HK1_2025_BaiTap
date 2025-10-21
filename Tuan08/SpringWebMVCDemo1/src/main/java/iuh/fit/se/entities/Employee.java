@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -28,6 +29,7 @@ public class Employee {
     @NotEmpty(message = "Email không được để trống")
     private String email;
     @NotNull(message = "Ngày sinh không được để trống")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateOfBirth;
     @Pattern(regexp = "\\d{10}", message = "Số điện thoại phải gồm 10 chữ số")
     private String phone;

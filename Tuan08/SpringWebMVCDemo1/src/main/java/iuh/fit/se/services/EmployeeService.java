@@ -10,4 +10,5 @@ public interface EmployeeService {
     void delete(int id);
     Employee findById(int id);
     List<Employee> findAll();
+    List<Employee> findByFirstNameContainingOrLastNameContainingOrEmailContaining(String text);
 }
