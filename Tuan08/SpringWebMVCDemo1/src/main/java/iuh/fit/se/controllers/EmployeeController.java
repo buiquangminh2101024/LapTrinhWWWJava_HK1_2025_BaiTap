@@ -39,7 +39,7 @@ public class EmployeeController {
         return "register";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/register")
     public ModelAndView registerEmployee(@Valid @ModelAttribute Employee employee, BindingResult bindingResult) {
         ModelAndView model = new ModelAndView();
         if (bindingResult.hasErrors()) {
@@ -58,6 +58,8 @@ public class EmployeeController {
         return model;
     }
 
+    // Có thể thay đổi tên cho error.jsp để nó chỉ xuất hiện khi truy cậy vào /update_intermediate?id=...
+    // chứ không phải đường dẫn nào cũng được (vd: /gg_men)
     @GetMapping(value = "/update_intermediate")
     public String updateEmployee(@RequestParam int id, RedirectAttributes redirectAttributes) {
         Employee employee = employeeService.findById(id);

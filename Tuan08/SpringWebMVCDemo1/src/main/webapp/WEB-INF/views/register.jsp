@@ -21,7 +21,7 @@
     </c:if>
     <div class="register">
         <%--@elvariable id="employee" type="iuh.fit.se.entities.Employee"--%>
-        <form:form action="${pageContext.request.contextPath}/save" method="POST" modelAttribute="employee">
+        <form:form action="${pageContext.request.contextPath}/register" method="POST" modelAttribute="employee">
             <form:input path="id" type="hidden"/>
 
             <form:label path="firstName" cssClass="label">First Name</form:label>
