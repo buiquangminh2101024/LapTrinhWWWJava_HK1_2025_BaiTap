@@ -23,7 +23,7 @@ public class NhaCungCap {
     private String diaChi;
     @Column(name = "SODIENTHOAI")
     private String soDienThoai;
-    @OneToMany(mappedBy = "nhaCungCap")
+    @OneToMany(mappedBy = "nhaCungCap", fetch = FetchType.LAZY)
     @ToString.Exclude
     private List<DienThoai> dienThoais;
 

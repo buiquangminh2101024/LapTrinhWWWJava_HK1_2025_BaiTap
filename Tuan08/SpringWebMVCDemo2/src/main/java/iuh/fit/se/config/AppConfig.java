@@ -6,16 +6,20 @@ import iuh.fit.se.services.DienThoaiService;
 import iuh.fit.se.services.NhaCungCapService;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
 @Configuration
 public class AppConfig {
+
     @Bean
     CommandLineRunner runner(NhaCungCapService nhaCungCapService, DienThoaiService dienThoaiService) {
         return args -> {

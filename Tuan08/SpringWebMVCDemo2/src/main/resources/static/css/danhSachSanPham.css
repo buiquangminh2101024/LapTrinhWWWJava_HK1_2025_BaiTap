@@ -1,5 +1,6 @@
 .danhsach_container {
-    background-color: #F7F7F7;;
+    background-color: #F7F7F7;
+    flex: 1;
 }
 .find {
     padding: 10px 0;

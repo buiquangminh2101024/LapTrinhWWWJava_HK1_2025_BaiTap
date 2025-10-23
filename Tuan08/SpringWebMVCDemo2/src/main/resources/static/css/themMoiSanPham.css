@@ -1,0 +1,49 @@
+.themmoi_container {
+    background-color: #F7F7F7;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.form_container {
+    width: 400px;
+    min-height: 600px;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 8px #737373;
+}
+.form {
+    padding: 0 20px 20px 20px;
+}
+.attribute {
+    margin-bottom: 20px;
+}
+.attribute_title {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Tahoma;
+}
+.input {
+    padding: 7px 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: lightgrey;
+    border-style: solid;
+}
+.error {
+    color: red;
+}
+.submit_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-light_blue {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border-width: 0;
+    color: white;
+}
