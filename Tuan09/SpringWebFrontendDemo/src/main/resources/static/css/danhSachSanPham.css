@@ -1,0 +1,102 @@
+.danhsach_container {
+    background-color: #F7F7F7;
+    flex: 1;
+}
+.find {
+    padding: 10px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.button-light_blue {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #007bff;
+    border-width: 0;
+    color: white;
+}
+.input {
+    padding: 7px 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: lightgrey;
+    border-style: solid;
+}
+.nhacungcap_name {
+    /* Không có chiều cao, chiều cao tự chỉnh */
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.category_text {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Tahoma;
+    background: linear-gradient(rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    -webkit-background-clip: text;  /* Cắt background theo chữ (Webkit) */
+    -webkit-text-fill-color: transparent;  /* Làm chữ trong suốt để hiện gradient */
+}
+.card_container {
+    display: grid;
+    grid-gap: 30px 100px;
+}
+@media screen and (max-width: 1920px) {
+    .dienthoai_container {
+        width: calc(100% - 200px);
+        padding: 10px 100px;
+    }
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 1200px) {
+    .dienthoai_container {
+        width: calc(100% - 100px);
+        padding: 10px 50px;
+    }
+    .card_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .dienthoai_container {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .card_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.card {
+    border-radius: 20px;
+    width: 100%;
+    overflow: hidden;
+    font-family: Tahoma;
+    background-color: white;
+    box-shadow: 0 2px 8px #888888;
+}
+.card_img_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+.card_img {
+    height: 200px;
+}
+.card_content_container {
+    padding: 20px;
+}
+.card_phone_name {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}

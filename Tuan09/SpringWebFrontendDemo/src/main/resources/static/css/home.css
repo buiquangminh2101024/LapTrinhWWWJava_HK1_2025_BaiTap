@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.header {
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-bottom: 2px solid black;
+}
+.header_font {
+    font-family: Tahoma;
+    font-size: 40px;
+    color: #BD0000;
+    font-weight: bold;
+}
+.navigate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+.content {
+    flex: 1;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}

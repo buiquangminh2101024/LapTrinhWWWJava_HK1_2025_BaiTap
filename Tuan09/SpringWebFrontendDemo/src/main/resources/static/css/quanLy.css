@@ -1,0 +1,47 @@
+.card {
+    position: relative;
+}
+.card:hover .form_button_delete,
+.card:hover .form_button_edit {
+    bottom: 5px;
+}
+.form_button_delete, .form_button_edit {
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: -50px;
+
+    transition-duration: 300ms;
+    transition-property: bottom;
+    transition-timing-function: linear;
+}
+.form_button_delete {
+    left: 75%;
+}
+.form_button_edit {
+    left: 25%;
+}
+.button_delete, .button_edit {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 4px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_delete:hover {
+    background: linear-gradient(90deg, rgba(199, 0, 0, 1) 0%, rgba(92, 0, 0, 1) 100%);
+    border: 0;
+}
+.button_edit:hover {
+    background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    border: 0;
+}
+.img_button_delete, .img_button_edit {
+    width: 55%;
+    height: 50%;
+}
