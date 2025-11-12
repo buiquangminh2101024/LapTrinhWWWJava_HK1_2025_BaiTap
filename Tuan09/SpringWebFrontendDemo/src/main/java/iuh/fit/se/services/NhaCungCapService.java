@@ -6,5 +6,5 @@ import iuh.fit.se.utils.ApiResponse;
 import java.util.List;
 
 public interface NhaCungCapService {
-    ApiResponse<List<NhaCungCap>> findAll();
+    ApiResponse<List<NhaCungCap>> findAllOrCustom(String find);
 }

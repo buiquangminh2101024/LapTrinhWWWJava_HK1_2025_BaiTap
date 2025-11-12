@@ -6,10 +6,10 @@
 
 <div class="themmoi_container">
     <div class="form_container">
-        <c:if test="${dienThoai.maDT == 0}">
+        <c:if test="${empty dienThoai.maDT}">
             <h1 style="text-align: center; margin-bottom: 30px;">Thêm điện thoại mới</h1>
         </c:if>
-        <c:if test="${dienThoai.maDT != 0}">
+        <c:if test="${not empty dienThoai.maDT}">
             <h1 style="text-align: center; margin-bottom: 30px;">Sửa điện thoại</h1>
         </c:if>
         <%--@elvariable id="dienThoai" type="iuh.fit.se.entities.DienThoai"--%>
@@ -20,28 +20,42 @@
                 cssClass="form"
                 enctype="multipart/form-data"
         >
-            <form:hidden path="maDT"/>
             <form:hidden path="hinhAnh"/>
+            <div class="attribute">
+                <div style="margin-bottom: 10px;">
+                    <form:label path="maDT" cssClass="attribute_title">Mã điện thoại</form:label>
+                </div>
+                <div><form:input path="maDT" cssClass="input" readonly="${not empty dienThoai.maDT}" /></div>
+                <c:if test="${not empty errors && not empty errors.get('error_maDT')}">
+                    <div class="error">${errors.get("error_maDT")}</div>
+                </c:if>
+            </div>
             <div class="attribute">
                 <div style="margin-bottom: 10px;">
                     <form:label path="tenDT" cssClass="attribute_title">Tên điện thoại</form:label>
                 </div>
                 <div><form:input path="tenDT" cssClass="input"/></div>
-                <div><form:errors path="tenDT" cssClass="error"/></div>
+                <c:if test="${not empty errors && not empty errors.get('error_tenDT')}">
+                    <div class="error">${errors.get("error_tenDT")}</div>
+                </c:if>
             </div>
             <div class="attribute">
                 <div style="margin-bottom: 10px;">
                     <form:label path="namSanXuat" cssClass="attribute_title">Năm sản xuất</form:label>
                 </div>
                 <div><form:input path="namSanXuat" cssClass="input" type="number"/></div>
-                <div><form:errors path="namSanXuat"  cssClass="error"/></div>
+                <c:if test="${not empty errors && not empty errors.get('error_namSanXuat')}">
+                    <div class="error">${errors.get("error_namSanXuat")}</div>
+                </c:if>
             </div>
             <div class="attribute">
                 <div style="margin-bottom: 10px;">
                     <form:label path="cauHinh" cssClass="attribute_title">Cấu hình</form:label>
                 </div>
                 <div><form:input path="cauHinh" cssClass="input"/></div>
-                <div><form:errors path="cauHinh"  cssClass="error"/></div>
+                <c:if test="${not empty errors && not empty errors.get('error_cauHinh')}">
+                    <div class="error">${errors.get("error_cauHinh")}</div>
+                </c:if>
             </div>
             <div class="attribute">
                 <div style="margin-bottom: 10px;">
@@ -64,7 +78,7 @@
                 <div></div>
             </div>
             <div class="submit_container">
-                <input type="submit" value="${dienThoai.maDT != 0? "Sửa": "Thêm"}" class="button-light_blue" />
+                <input type="submit" value="${not empty dienThoai.maDT? "Sửa": "Thêm"}" class="button-light_blue" />
             </div>
         </form:form>
     </div>

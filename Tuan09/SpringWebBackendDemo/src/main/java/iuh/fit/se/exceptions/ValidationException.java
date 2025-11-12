@@ -17,6 +17,7 @@ public class ValidationException extends AppException {
         super(ErrorCode.VALIDATION_FAILED);
         errors = new HashMap<>();
         convertToMap(errorList);
+        System.out.println(errors);
     }
 
     private void convertToMap(Set<ConstraintViolation<DienThoaiRequest>> errorList) {

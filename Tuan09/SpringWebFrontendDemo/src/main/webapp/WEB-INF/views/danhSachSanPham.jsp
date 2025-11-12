@@ -15,27 +15,18 @@
             <div class="dienthoai_container">
                 <div class="nhacungcap_name">
                     <div class="category_text">
-                        ${ncc.tenNCC}
+                        ${ncc.key}
                     </div>
                 </div>
                 <div class="card_container">
-                    <c:forEach var="phone" items="${ncc.dienThoais}">
-                        <div class="card">
-                            <div class="card_img_container">
-                                <img src="${pageContext.request.contextPath}/images/${phone.hinhAnh}" alt="" class="card_img">
-                            </div>
-                            <div class="card_content_container">
-                                <div class="card_phone_name">${phone.tenDT}</div>
-                                <div style="margin-bottom: 10px;">
-                                    <span style="font-weight: bold; color: #FC466B;">Tên nhà cung cấp: </span>
-                                        ${phone.nhaCungCap.tenNCC}
-                                </div>
-                                <div>
-                                    <span style="font-weight: bold; color: #3F5EFB;">Cấu hình: </span>
-                                        ${phone.cauHinh}
-                                </div>
-                            </div>
-                        </div>
+                    <c:forEach var="phone" items="${ncc.value}">
+                        <jsp:include page="card.jsp">
+                            <jsp:param name="maDT" value="${phone.maDT}"/>
+                            <jsp:param name="hinhAnh" value="${phone.hinhAnh}"/>
+                            <jsp:param name="tenDT" value="${phone.tenDT}"/>
+                            <jsp:param name="tenNCC" value="${ncc.key}"/>
+                            <jsp:param name="cauHinh" value="${phone.cauHinh}"/>
+                        </jsp:include>
                     </c:forEach>
                 </div>
             </div>

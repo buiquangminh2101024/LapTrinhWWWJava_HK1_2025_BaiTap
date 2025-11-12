@@ -16,6 +16,9 @@ body {
     gap: 50px;
     border-bottom: 2px solid black;
 }
+.header:hover {
+    cursor: pointer;
+}
 .header_font {
     font-family: Tahoma;
     font-size: 40px;

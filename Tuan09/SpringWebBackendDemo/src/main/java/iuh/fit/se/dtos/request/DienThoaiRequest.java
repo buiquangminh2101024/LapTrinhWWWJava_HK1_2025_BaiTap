@@ -5,16 +5,14 @@ import iuh.fit.se.entities.NhaCungCap;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class DienThoaiRequest {
     @NotBlank(message = "Mã điện thoại phải có ký tự ngoài ký tự trắng")
     private String maDT;
@@ -24,6 +22,6 @@ public class DienThoaiRequest {
     private String namSanXuat;
     @Length(max = 255, message = "Cấu hình phải dưới 255 ký tự")
     private String cauHinh;
-    private NhaCungCapResponse nhaCungCap;
+    private String nhaCungCap;
     private String hinhAnh;
 }

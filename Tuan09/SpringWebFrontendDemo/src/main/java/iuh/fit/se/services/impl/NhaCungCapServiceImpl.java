@@ -26,16 +26,15 @@ public class NhaCungCapServiceImpl implements NhaCungCapService {
     private String endPoint;
 
     @Override
-    public ApiResponse<List<NhaCungCap>> findAll() {
-        return restClient.get().uri(endPoint + "nhaCungCap").accept(MediaType.APPLICATION_JSON)
+    public ApiResponse<List<NhaCungCap>> findAllOrCustom(String find) {
+        return restClient.get().uri(endPoint + "nhaCungCap?find=" + find).accept(MediaType.APPLICATION_JSON)
                 .exchange((request, response) -> {
                     try (InputStream body = response.getBody()) {
                         if (body.available() == 0) {
                             throw new AppException(ErrorCode.NO_CONTENT);
                         }
 
-                        return objectMapper
-                                .<ApiResponse<List<NhaCungCap>>>readValue(body, new TypeReference<>() {});
+                        return objectMapper.readValue(body, new TypeReference<>() {});
                     } catch (IOException e) {
                         e.printStackTrace();
                         throw new AppException(ErrorCode.CANT_PROCESS);

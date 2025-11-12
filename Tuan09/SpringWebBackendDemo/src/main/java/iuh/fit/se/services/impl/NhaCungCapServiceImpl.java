@@ -37,6 +37,21 @@ public class NhaCungCapServiceImpl implements NhaCungCapService {
         return nhaCungCapRepository.findAll().stream().map(this::toNhaCungCapResponse).toList();
     }
 
+    @Override
+    public List<NhaCungCapResponse> findCustom(String find) {
+        return nhaCungCapRepository
+                .findByMaNCCContainsOrTenNCCContainsOrDiaChiContainsOrSoDienThoaiContains(find, find, find, find)
+                .stream().map(this::toNhaCungCapResponse).toList();
+    }
+
+    @Override
+    public NhaCungCapResponse findById(String id) {
+        return toNhaCungCapResponse(nhaCungCapRepository
+                .findById(id)
+                .orElseThrow(() -> new AppException(ErrorCode.NHACUNGCAP_NOT_EXISTED))
+        );
+    }
+
     private NhaCungCap fromNhaCungCapRequest(NhaCungCapRequest nhaCungCapRequest) {
         return modelMapper.map(nhaCungCapRequest, NhaCungCap.class);
     }

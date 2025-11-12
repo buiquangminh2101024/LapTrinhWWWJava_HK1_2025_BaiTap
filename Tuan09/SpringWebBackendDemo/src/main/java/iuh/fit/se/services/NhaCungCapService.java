@@ -10,4 +10,6 @@ public interface NhaCungCapService {
     NhaCungCapResponse add(NhaCungCapRequest nhaCungCapRequest);
     boolean hasData();
     List<NhaCungCapResponse> findAll();
+    List<NhaCungCapResponse> findCustom(String find);
+    NhaCungCapResponse findById(String id);
 }

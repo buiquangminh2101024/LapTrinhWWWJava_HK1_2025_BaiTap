@@ -12,7 +12,7 @@
     <title>Shining The Way</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header" onclick="window.location.href='${pageContext.request.contextPath}'">
         <span class="header_font">Shining</span>
         <img src="${pageContext.request.contextPath}/images/header.png" alt="Lỗi server" style="width: 10%;">
         <span class="header_font">The Way</span>

@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -20,9 +21,9 @@ public class NhaCungCapController {
     private static Logger logger = LoggerFactory.getLogger(NhaCungCapController.class.getName());
 
     @GetMapping
-    public ApiResponse<List<NhaCungCapResponse>> findAll() {
+    public ApiResponse<List<NhaCungCapResponse>> findAllOrCustom(@RequestParam(defaultValue = "") String find) {
         return ApiResponse.<List<NhaCungCapResponse>>builder()
-                .data(nhaCungCapService.findAll())
+                .data(find.isBlank()? nhaCungCapService.findAll(): nhaCungCapService.findCustom(find))
                 .build();
     }
 }

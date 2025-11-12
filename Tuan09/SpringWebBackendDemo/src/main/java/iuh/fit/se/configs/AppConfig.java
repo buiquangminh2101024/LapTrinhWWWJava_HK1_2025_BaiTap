@@ -7,10 +7,13 @@ import iuh.fit.se.entities.DienThoai;
 import iuh.fit.se.entities.NhaCungCap;
 import iuh.fit.se.services.DienThoaiService;
 import iuh.fit.se.services.NhaCungCapService;
+import iuh.fit.se.utils.ImageHandler;
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.nio.file.Paths;
 
 @Configuration
 public class AppConfig {
@@ -40,52 +43,53 @@ public class AppConfig {
             dienThoai1.setTenDT("Galaxy S25 FE");
             dienThoai1.setNamSanXuat("2024");
             dienThoai1.setCauHinh("Tốc độ CPU: 3.2 GHz, 2.9GHz, 2.6GHz, 1.95GHz - Độ phân giải (Màn hình chính): 1080 x 2340 (FHD+) - Dung lượng pin (mAh, Typical): 4900");
-            dienThoai1.setHinhAnh("dt1.png");
+//            dienThoai1.setHinhAnh("dt1.png");
 
             DienThoaiRequest dienThoai2 = new DienThoaiRequest();
             dienThoai2.setMaDT("DT002");
             dienThoai2.setTenDT("Galaxy S25 Ultra");
             dienThoai2.setNamSanXuat("2024");
             dienThoai2.setCauHinh("Tốc độ CPU: 4.47GHz, 3.5GHz - Độ phân giải (Màn hình chính): 3120 X 1440 (Độ phân giải Quad HD+) - Dung lượng pin (mAh, Typical): 5000");
-            dienThoai2.setHinhAnh("dt2.png");
+//            dienThoai2.setHinhAnh("dt2.png");
 
             DienThoaiRequest dienThoai3 = new DienThoaiRequest();
             dienThoai3.setMaDT("DT003");
             dienThoai3.setTenDT("Galaxy S24 Ultra");
             dienThoai3.setNamSanXuat("2024");
             dienThoai3.setCauHinh("Tốc độ CPU: 3.39 GHz, 3.1GHz, 2.9GHz, 2.2GHz - Độ phân giải (Màn hình chính): 3120 X 1440 (Độ phân giải Quad HD+) - Dung lượng pin (mAh, Typical): 5000");
-            dienThoai3.setHinhAnh("dt3.png");
+//            dienThoai3.setHinhAnh("dt3.png");
 
             DienThoaiRequest dienThoai4 = new DienThoaiRequest();
             dienThoai4.setMaDT("DT004");
             dienThoai4.setTenDT("iPhone 17 Pro");
             dienThoai4.setNamSanXuat("2025");
             dienThoai4.setCauHinh("Chip: Chip A19 Pro - Độ phân giải (Màn hình chính): 2622 x 1206 với mật độ điểm ảnh 460 pi - Dung lượng pin: xem video lên đến 31 giờ");
-            dienThoai4.setHinhAnh("dt4.png");
+//            dienThoai4.setHinhAnh("dt4.png");
 
             DienThoaiRequest dienThoai5 = new DienThoaiRequest();
             dienThoai5.setMaDT("DT005");
             dienThoai5.setTenDT("iPhone 17");
             dienThoai5.setNamSanXuat("2025");
             dienThoai5.setCauHinh("Chip: Chip A19 Pro - Độ phân giải (Màn hình chính): 2622 x 1206 với mật độ điểm ảnh 460 pi - Dung lượng pin: xem video lên đến 30 giờ");
-            dienThoai5.setHinhAnh("dt5.png");
+//            dienThoai5.setHinhAnh("dt5.png");
 
             NhaCungCapResponse nhaCungCapResponse1 = nhaCungCapService.add(nhaCungCapRequest1);
 //            NhaCungCap nhaCungCap1 = modelMapper().map(nhaCungCapResponse1, NhaCungCap.class);
             NhaCungCapResponse nhaCungCapResponse2 = nhaCungCapService.add(nhaCungCapRequest2);
 //            NhaCungCap nhaCungCap2 = modelMapper().map(nhaCungCapResponse2, NhaCungCap.class);
 
-            dienThoai1.setNhaCungCap(nhaCungCapResponse1);
-            dienThoai2.setNhaCungCap(nhaCungCapResponse1);
-            dienThoai3.setNhaCungCap(nhaCungCapResponse1);
-            dienThoai4.setNhaCungCap(nhaCungCapResponse2);
-            dienThoai5.setNhaCungCap(nhaCungCapResponse2);
+            dienThoai1.setNhaCungCap(nhaCungCapResponse1.getMaNCC());
+            dienThoai2.setNhaCungCap(nhaCungCapResponse1.getMaNCC());
+            dienThoai3.setNhaCungCap(nhaCungCapResponse1.getMaNCC());
+            dienThoai4.setNhaCungCap(nhaCungCapResponse2.getMaNCC());
+            dienThoai5.setNhaCungCap(nhaCungCapResponse2.getMaNCC());
 
-            dienThoaiService.add(dienThoai1);
-            dienThoaiService.add(dienThoai2);
-            dienThoaiService.add(dienThoai3);
-            dienThoaiService.add(dienThoai4);
-            dienThoaiService.add(dienThoai5);
+            ImageHandler.xoaAllImage();
+            dienThoaiService.add(dienThoai1, ImageHandler.createMultipartFileFromResource("hinhAnhFile", "dt1.png", "image/png"));
+            dienThoaiService.add(dienThoai2, ImageHandler.createMultipartFileFromResource("hinhAnhFile", "dt2.png", "image/png"));
+            dienThoaiService.add(dienThoai3, ImageHandler.createMultipartFileFromResource("hinhAnhFile", "dt3.png", "image/png"));
+            dienThoaiService.add(dienThoai4, ImageHandler.createMultipartFileFromResource("hinhAnhFile", "dt4.png", "image/png"));
+            dienThoaiService.add(dienThoai5, ImageHandler.createMultipartFileFromResource("hinhAnhFile", "dt5.png", "image/png"));
         };
     }
 }

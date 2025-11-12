@@ -10,6 +10,6 @@ public class DienThoaiResponse {
     private String tenDT;
     private String namSanXuat;
     private String cauHinh;
-    private NhaCungCapResponse nhaCungCap;
+    private String nhaCungCap;
     private String hinhAnh;
 }
